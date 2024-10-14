@@ -10,7 +10,7 @@ def is_valid_input(input_str):
 def captcha():
     if request.method == 'POST':
         captcha_solution = request.form.get('captcha_solution')
-        if captcha_solution == '5😊':
+        if captcha_solution == '5':
             return redirect(url_for('home'))
     return render_template_string('''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Captcha</title><style>
 body{font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;background-color:#f0f0f0;margin:0}
